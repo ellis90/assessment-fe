@@ -6,7 +6,6 @@ import Box from "@mui/material/Box";
 import React from "react";
 import {SubmitHandler, useForm} from "react-hook-form";
 import {setUserStatus, UserModel, UserStatus} from "../model/user";
-import {useNavigate} from "react-router-dom";
 
 
 const defaultValue: UserModel = {
@@ -27,7 +26,7 @@ interface IForm {
   updateValue?: UserModel
 }
 export const Form = ({handleClickSubmit, updateValue}: IForm) => {
-  const {handleSubmit, register, reset, formState: { errors }} = useForm<UserModel>({
+  const {handleSubmit, register, formState: { errors }} = useForm<UserModel>({
     defaultValues: defaultValue,
     values: updateValue
   })
