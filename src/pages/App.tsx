@@ -7,7 +7,6 @@ import UpdateUser from "./UpdateUser";
 import {NoMatch} from "./NoMatch";
 import DeleteUser from "./DeleteUser";
 function App() {
-
   return (
       <Routes>
         <Route path="/" element={<Layout />}>
